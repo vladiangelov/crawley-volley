@@ -1,1 +1,16 @@
 // Specific CSS for your home-page
+.home-picture-placeholder {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.highlights {
+  display: flex;
+  width: 100vw;
+  margin: auto;
+  justify-content: space-around;
+}
+.highlight-item {
+  padding: 16px;
+}

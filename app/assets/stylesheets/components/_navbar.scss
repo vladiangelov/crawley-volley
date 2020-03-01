@@ -1,12 +1,84 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  background: black;
+  height: 100px;
+  margin: 0;
+  padding: 4px;
+  font-family: 'Ubuntu', sans-serif;
+  img {
+    height: 100px;
+  }
+}
+.menu-items {
+  display: flex;
+  align-items: flex-end;
+  a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.5s;
+    &:hover {
+    background-color: rgb(191, 0, 0);
+    border-radius: 4px;
+    }
+  }
+}
+.menu-item {
+  padding: 8px 16px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.member-login {
+  position: fixed;
+  top: 2vh;
+  right: 2vw;
+  border-radius: 4px;
+  a {
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+    height: 14px;
+    font-size: 12px;
+    background-color: rgb(191, 0, 0);
+    color: black;
+    padding: 4px;
+    margin: 4px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 0.5s;
+    &:hover {
+      background-color: white;
+      color: rgb(191, 0, 0);
+    }
+  }
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-links {
+  position: fixed;
+  top: 2vh;
+  left: 2vw;
+  border-radius: 50%;
+  a {
+    display: inline-block;
+    text-align: center;
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    background-color: rgb(191, 0, 0);
+    color: white;
+    padding: 4px;
+    margin: 4px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.5s;
+    &:hover {
+      background-color: white;
+      color: rgb(191, 0, 0);
+    }
+  }
 }
