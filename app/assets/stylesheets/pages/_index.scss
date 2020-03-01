@@ -1,2 +1,13 @@
 // Import page-specific CSS files here.
 @import "home";
+
+
+body {
+  margin: 0px;
+}
+h1 {
+  font-family: 'Teko', sans-serif;
+}
+.container {
+  width: 1000px;
+}
