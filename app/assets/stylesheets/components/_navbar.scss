@@ -1,4 +1,5 @@
 .navbar {
+  z-index: 3;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -33,6 +34,7 @@
 }
 
 .member-login {
+  z-index: 4;
   position: fixed;
   top: 2vh;
   right: 2vw;
@@ -59,6 +61,7 @@
 }
 
 .navbar-links {
+  z-index: 4;
   position: fixed;
   top: 2vh;
   left: 2vw;
