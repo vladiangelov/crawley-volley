@@ -35,7 +35,7 @@
 
 .member-login {
   z-index: 4;
-  position: fixed;
+  position: absolute;
   top: 2vh;
   right: 2vw;
   border-radius: 4px;
@@ -62,7 +62,7 @@
 
 .navbar-links {
   z-index: 4;
-  position: fixed;
+  position: absolute;
   top: 2vh;
   left: 2vw;
   border-radius: 50%;
@@ -84,4 +84,8 @@
       color: rgb(191, 0, 0);
     }
   }
+}
+
+@media only screen and (max-width: 1024px) {
+
 }

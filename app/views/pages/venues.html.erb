@@ -1,10 +1,21 @@
 <div class="container">
-  <div>
-    <h1>Imberhorne School</h1>
-    <p>Imberhorne Lane, Felbridge, East Sussex</p>
+  <div class="locations">
+    <div>
+      <h1>Imberhorne School</h1>
+      <p>Imberhorne Ln, East Grinstead RH19 1QY</p>
+    </div>
+    <div>
+      <h1>Ifield Community College</h1>
+      <p>Crawley Ave, Crawley RH11 0DB</p>
+    </div>
+    <div>
+      <h1>Northgate Playing Field (summer only)</h1>
+      <p>34 Woodside Rd, Crawley RH10 8EL</p>
+    </div>
   </div>
-  <div>
-    <h1>Ifield Community College</h1>
-    <p>Ifield CC, Ifield, Crawley, West Sussex</p>
-  </div>
+  <div
+  id="map"
+  style="width: 100%; height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
