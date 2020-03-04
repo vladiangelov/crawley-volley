@@ -1,16 +1,16 @@
 <div class="navbar">
   <div class="menu-items">
-    <%= link_to 'TEAM', '#', class: "menu-item" %>
-    <%= link_to 'VENUES', '#', class: "menu-item" %>
-    <%= link_to 'NEWS', '#', class: "menu-item" %>
+    <%= link_to 'TEAMS', teams_path, class: "menu-item" %>
+    <%= link_to 'VENUES', venues_path, class: "menu-item" %>
+    <%= link_to 'NEWS', articles_path, class: "menu-item" %>
   </div>
   <div class="menu-logo">
     <%= image_tag("crawley_logo_black.png") %>
   </div>
   <div class="menu-items">
-    <%= link_to 'GALERY', '#', class: "menu-item" %>
+    <%= link_to 'GALLERY', '#', class: "menu-item" %>
     <%= link_to 'MATCHES', '#', class: "menu-item" %>
-    <%= link_to 'CONTACT', '#', class: "menu-item" %>
+    <%= link_to 'CONTACT', contact_path, class: "menu-item" %>
   </div>
 </div>
 <div class="navbar-links">
@@ -19,5 +19,9 @@
   <a href="#"><i class="fab fa-twitter"></i></a>
 </div>
 <div class="member-login">
-  <%= link_to 'Member Login', new_user_session_path %>
+  <% if current_user.nil? %>
+    <%= link_to 'Member Login', new_user_session_path %>
+  <% else %>
+    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+  <% end %>
 </div>
