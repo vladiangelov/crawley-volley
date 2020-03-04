@@ -1,10 +1,19 @@
-<h1><strong>NEWS</strong></h1>
-  <%  @articles.reverse.each do |article| %>
-  <h2><%= article.title %></h2>
-  <p><%= article.content %></p>
-  <%= link_to "More details", article_path(article.id) %>
-  <%= link_to "Edit", edit_article_path(article.id) %>
-  <%= link_to "Delete", article_path(article.id), method: :delete, data: {confirm: "Are you sure?"} %>
-  <br>
-  <br>
-<% end %>
+<div class="container">
+  <h1><strong>NEWS</strong></h1>
+  <% if !current_user.nil? %>
+    <%= link_to "Create News", new_article_path %>
+  <% end %>
+    <%  @articles.reverse.each do |article| %>
+    <h2><%= article.title %></h2>
+    <h3><%= article.category %></h3>
+    <%= image_tag("news_men.jpg", size: "275x200" ) %>
+    <p><%= article.content %></p>
+    <%= link_to "Read More", article_path(article.id) %>
+    <% if !current_user.nil? %>
+      <%= link_to "Edit", edit_article_path(article.id) %>
+      <%= link_to "Delete", article_path(article.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    <% end %>
+    <br>
+    <br>
+  <% end %>
+</div>

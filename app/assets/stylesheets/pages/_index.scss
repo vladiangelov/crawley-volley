@@ -1,15 +1,25 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "venues";
 
 
 body {
   margin: 0px;
 }
 
-h1 {
+h1, h2 {
   font-family: 'Teko', sans-serif;
 }
-.container {
+
+h3, p {
+  font-family: 'Ubuntu', sans-serif;
+}
+.container-home {
   width: 1000px;
   margin: auto;
+}
+
+.container {
+  width: 1000px;
+  margin: 120px auto 50px auto;
 }
