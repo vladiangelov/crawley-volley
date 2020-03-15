@@ -1,11 +1,11 @@
 .footer {
+  box-sizing: border-box;
   background-color: rgba(1, 1, 1, 0.9);
   display: flex;
   justify-content: space-between;
   font-family: 'Ubuntu', sans-serif;
   align-items: center;
-  width: 100%;
-  height: 50px;
+  height: 60px;
   color: white;
 }
 .footer-links {
@@ -28,7 +28,6 @@
 @media only screen and (max-width: 1024px) {
   .footer {
     display: block;
-    height: 50px;
     padding: 8px;
   }
   .footer-links {
