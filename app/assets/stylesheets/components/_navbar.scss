@@ -4,15 +4,25 @@
   top: 0;
   width: 100vw;
   display: flex;
-  justify-content: space-around;
-  background: black;
+  justify-content: center;
+  background: rgba(1, 1, 1, 0.9);
   height: 100px;
   margin: 0;
   padding: 4px;
   font-family: 'Ubuntu', sans-serif;
   img {
+    margin: 0px 64px;
     height: 100px;
   }
+}
+.navbar-container {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+  position: relative;
 }
 .menu-items {
   display: flex;
@@ -23,6 +33,7 @@
   font-weight: 500;
   font-size: 14px;
   transition: 0.5s;
+  margin-bottom: 2px;
     &:hover {
     background-color: rgb(191, 0, 0);
     border-radius: 4px;
@@ -36,16 +47,15 @@
 .member-login {
   z-index: 4;
   position: absolute;
-  top: 2vh;
-  right: 2vw;
+  top: 10px;
+  right: -25px;
   border-radius: 4px;
   a {
     font-family: 'Ubuntu', sans-serif;
     display: inline-block;
     text-align: center;
-    width: 80px;
-    height: 14px;
-    font-size: 12px;
+    width: auto;
+    font-size: 14px;
     background-color: rgb(191, 0, 0);
     color: black;
     padding: 4px;
@@ -60,11 +70,11 @@
   }
 }
 
-.navbar-links {
+.navbar-social-links {
   z-index: 4;
   position: absolute;
-  top: 2vh;
-  left: 2vw;
+  top: 10px;
+  left: -20px;
   border-radius: 50%;
   a {
     display: inline-block;
@@ -85,7 +95,33 @@
     }
   }
 }
+.navbar-mobile-menu {
+  display: none;
+  color: white;
+}
 
 @media only screen and (max-width: 1024px) {
-
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      margin: 8px 16px;
+      height: 84px;
+    }
+  }
+  .menu-items {
+    display:none;
+  }
+  .member-login {
+    display: none;
+  }
+  .navbar-social-links {
+    display: none;
+  }
+  .navbar-mobile-menu {
+    display: block;
+    margin-right: 40px;
+    font-size: 32px;
+  }
 }

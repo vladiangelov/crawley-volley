@@ -2,6 +2,7 @@
 .home-picture-placeholder {
   width: 100%;
   height: 100vh;
+  max-height: 700px;
   z-index: 0;
   object-fit: cover;
 }
@@ -12,6 +13,7 @@
   justify-content: space-around;
 }
 .highlight-item {
+  width: 33%;
   padding: 16px 32px;
   a {
     font-family: 'Teko', sans-serif;
@@ -31,7 +33,7 @@
   position: absolute;
   text-align: right;
   width: auto;
-  top: 200px;
+  top: 25vh;
   right: 100px;
   padding: 2px;
   p {
@@ -44,5 +46,28 @@
   }
   br {
     line-spacing: 0.1em;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .home-picture-placeholder {
+    height: 75vh;
+  }
+  .highlights {
+    display: block;
+  }
+
+  .highlight-item {
+    width: 100%;
+    padding: 0px;
+    margin: auto;
+  }
+
+  .home-picture-text {
+    right: 20px;
+    p {
+      font-size: 20px;
+    }
   }
 }

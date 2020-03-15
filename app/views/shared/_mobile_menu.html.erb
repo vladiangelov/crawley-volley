@@ -1,0 +1,13 @@
+<div class="mobile-menu" style="display: none">
+  <%= link_to 'ABOUT', about_path, class: "mobile-menu-item" %>
+  <%= link_to 'VENUES', venues_path, class: "mobile-menu-item" %>
+  <%= link_to 'NEWS', articles_path, class: "mobile-menu-item" %>
+  <%= link_to 'TEAMS', teams_path, class: "mobile-menu-item" %>
+  <%= link_to 'MATCHES', '#', class: "mobile-menu-item" %>
+  <%= link_to 'CONTACT', contact_path, class: "mobile-menu-item" %>
+  <% if current_user.nil? %>
+    <%= link_to 'MEMBERS LOGIN', new_user_session_path, class: "mobile-menu-item" %>
+  <% else %>
+    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "mobile-menu-item" %>
+  <% end %>
+</div>
