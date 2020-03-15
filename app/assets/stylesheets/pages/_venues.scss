@@ -1,4 +1,23 @@
 .locations {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  margin-top: 32px;
+  h2 {
+    margin-right: 32px;
+  }
+  p {
+  }
+}
+.locations-description {
+  margin: 0px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .locations{
+    display: block
+  }
+}
+
+#map {
+  margin-top: 32px;
 }
