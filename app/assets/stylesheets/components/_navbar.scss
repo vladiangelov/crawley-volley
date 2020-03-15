@@ -1,13 +1,14 @@
 .navbar {
+  box-sizing: border-box;
+  width: 100%;
   z-index: 3;
   position: fixed;
   top: 0;
-  width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   background: rgba(1, 1, 1, 0.9);
-  height: 100px;
-  margin: 0;
+  height: 110px;
+  margin: auto;
   padding: 4px;
   font-family: 'Ubuntu', sans-serif;
   img {
