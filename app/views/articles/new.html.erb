@@ -1,8 +1,9 @@
 <div class="container">
   <%= simple_form_for(@article) do |f| %>
     <%= f.input :title %>
-    <%= f.input :category %>
+    <%= f.input :category, :collection => ["Club News", "Ladies", "Men", "Other News"] %>
     <%= f.input :content %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit "Add news", class: "btn btn-primary" %>
   <% end %>
 </div>

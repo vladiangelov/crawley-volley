@@ -1,7 +1,13 @@
 <div class="container">
   <h1><%= @article.title %></h1>
+  <p><%= @article.category %></p>
   <p><%= @article.created_at.time.strftime("%d/%m/%Y") %></p>
-  <%= image_tag("news_men.jpg", size: "550x400" ) %>
-  <p><%= @article.content %></p>
+  <% if @article.photo.attached? %>
+    <%= cl_image_tag @article.photo.key, height: 250, width: 320, crop: :fill %>
+  <% else %>
+    <%= image_tag("news_men.jpg", height: 250, width: 320, crop: :fill ) %>
+  <% end %>
+    <p><%= @article.content %></p>
   <%= link_to "Back to news", articles_path %>
+
 </div>

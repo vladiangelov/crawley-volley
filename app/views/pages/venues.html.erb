@@ -1,21 +1,26 @@
 <div class="container">
-  <div class="locations">
-    <div>
-      <h1>Imberhorne School</h1>
-      <p>Imberhorne Ln, East Grinstead RH19 1QY</p>
-    </div>
-    <div>
-      <h1>Ifield Community College</h1>
-      <p>Crawley Ave, Crawley RH11 0DB</p>
-    </div>
-    <div>
-      <h1>Northgate Playing Field (summer only)</h1>
-      <p>34 Woodside Rd, Crawley RH10 8EL</p>
-    </div>
+  <div>
+    <h1>Our Venues</h1>
   </div>
+    <div class="locations">
+      <h2>Imberhorne School</h2>
+      <p><em>Imberhorne Ln, East Grinstead, West Sussex RH29 1QY</em></p>
+    </div>
+    <p class="locations-description">Mondays - 20:00 to 22:00 - at this venue we hold both trainings and also our home matches</p>
+    <div class="locations">
+      <h2>Ifield Community College</h2>
+      <p><em>Crawley Ave, Crawley, West Sussex RH21 0DB</em></p>
+    </div>
+    <p class="locations-description">Wednesdays - 19:30 to 21:30 - this venue is for trainings only</p>
+    <div class="locations">
+      <h2>Northgate Playing Field (summer only)</h2>
+      <p><em>34 Woodside Rd, Crawley, West Sussex RH10 8EL (outdoor)</em></p>
+    </div>
+    <p class="locations-description">More information is available here from May until August - check our Facebook page for most accurate info</p>
   <div
   id="map"
   style="width: 100%; height: 600px;"
   data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>

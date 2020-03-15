@@ -1,6 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "venues";
+@import "about_us";
 
 body {
   margin: 0px;
@@ -26,7 +27,7 @@ a {
 
 .container {
   width: 1000px;
-  margin: 120px auto 50px auto;
+  margin: 130px auto 50px auto;
 }
 
 @media only screen and (max-width: 1000px) {
