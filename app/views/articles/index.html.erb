@@ -1,24 +1,28 @@
 <div class="container">
-  <h1><strong>NEWS</strong></h1>
-  <% if !current_user.nil? %>
-    <%= link_to "Create News", new_article_path %>
-  <% end %>
-    <%  @articles.reverse.each do |article| %>
-    <h2><%= article.title %></h2>
-    <h3><%= article.category %></h3>
-    <p><%= article.created_at.time.strftime("%d/%m/%Y") %></p>
-      <% if article.photo.attached? %>
-        <%= cl_image_tag article.photo.key, height: 200, width: 275, crop: :fill %>
-      <% else %>
-        <%= image_tag("news_men.jpg", size: "275x200" ) %>
-      <% end %>
-    <p><%= article.content %></p>
-    <%= link_to "Read More", article_path(article.id) %>
+  <div class="news-header">
+    <h1><strong>NEWS</strong></h1>
     <% if !current_user.nil? %>
-      <%= link_to "Edit", edit_article_path(article.id) %>
-      <%= link_to "Delete", article_path(article.id), method: :delete, data: {confirm: "Are you sure?"} %>
+      <%= link_to "Create News", new_article_path %>
     <% end %>
-    <br>
-    <br>
-  <% end %>
+  </div>
+  <div class="news-grid">
+    <%  @articles.reverse.each do |article| %>
+      <div class="news-item">
+        <h2><%= article.title %></h2>
+        <h3><%= article.category %></h3>
+        <p><%= article.created_at.time.strftime("%d/%m/%Y") %></p>
+          <% if article.photo.attached? %>
+            <%= cl_image_tag article.photo.key, height: 200, width: 275, crop: :fill %>
+          <% else %>
+            <%= image_tag("news_men.jpg", size: "275x200" ) %>
+          <% end %>
+        <p><%= article.content %></p>
+        <%= link_to "Read More", article_path(article.id) %>
+        <% if !current_user.nil? %>
+          <%= link_to "Edit", edit_article_path(article.id) %>
+          <%= link_to "Delete", article_path(article.id), method: :delete, data: {confirm: "Are you sure?"} %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>
