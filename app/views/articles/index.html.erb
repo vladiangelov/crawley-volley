@@ -8,16 +8,18 @@
   <div class="news-grid">
     <%  @articles.reverse.each do |article| %>
       <div class="news-item">
-        <h2><%= article.title %></h2>
-        <h3><%= article.category %></h3>
-        <p><%= article.created_at.time.strftime("%d/%m/%Y") %></p>
+        <div class="news-headline">
+          <h2><%= article.title %></h2>
+          <h3><%= article.category %></h3>
+          <p><%= article.created_at.time.strftime("%d/%m/%Y") %></p>
+        </div>
           <% if article.photo.attached? %>
-            <%= cl_image_tag article.photo.key, height: 200, width: 275, crop: :fill %>
+            <%= cl_image_tag article.photo.key, class: "news-image" %>
           <% else %>
-            <%= image_tag("news_men.jpg", size: "275x200" ) %>
+            <%= image_tag("news_men.jpg", class: "news-image" ) %>
           <% end %>
-        <p><%= article.content %></p>
-        <%= link_to "Read More", article_path(article.id) %>
+        <p class="news-content"><%= article.content.first(300) %>... <%= link_to "Read More", article_path(article.id) %></p>
+
         <% if !current_user.nil? %>
           <%= link_to "Edit", edit_article_path(article.id) %>
           <%= link_to "Delete", article_path(article.id), method: :delete, data: {confirm: "Are you sure?"} %>
