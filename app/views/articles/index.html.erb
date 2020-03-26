@@ -9,21 +9,28 @@
     <%  @articles.reverse.each do |article| %>
       <div class="news-item">
         <div class="news-headline">
-          <h2><%= article.title %></h2>
-          <h3><%= article.category %></h3>
-          <p><%= article.created_at.time.strftime("%d/%m/%Y") %></p>
-        </div>
           <% if article.photo.attached? %>
             <%= cl_image_tag article.photo.key, class: "news-image" %>
           <% else %>
             <%= image_tag("news_men.jpg", class: "news-image" ) %>
           <% end %>
-        <p class="news-content"><%= article.content.first(300) %>... <%= link_to "Read More", article_path(article.id) %></p>
-
-        <% if !current_user.nil? %>
-          <%= link_to "Edit", edit_article_path(article.id) %>
-          <%= link_to "Delete", article_path(article.id), method: :delete, data: {confirm: "Are you sure?"} %>
-        <% end %>
+          <p class="news-category"><%= article.category %></p>
+          <div class="news-date">
+            <p><%= article.created_at.time.strftime("%e") %></p>
+            <p><%= article.created_at.time.strftime("%b") %></p>
+          </div>
+        </div>
+        <div class="news-content">
+          <h2><%= article.title %></h2>
+          <p><%= article.content.first(400) %> <strong>>></strong></p>
+        </div>
+        <div class="news-links">
+          <p class="news-link-button"><%= link_to "Read More", article_path(article.id) %></p>
+          <% if !current_user.nil? %>
+            <p class="news-link-button"> <%= link_to "Edit", edit_article_path(article.id) %></p>
+            <p class="news-link-button"> <%= link_to "Delete", article_path(article.id), method: :delete, data: {confirm: "Are you sure?"} %></p>
+          <% end %>
+        </div>
       </div>
     <% end %>
   </div>
