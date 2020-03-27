@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Men's Team</h1>
+  <div class="news-grid">
+    <% @players.each do |player| %>
+    <div class="card__collection clear-fix">
+      <div class="cards cards--two">
+        <%= image_tag "albert_face.jpg", class: "img-responsive" %>
+        <span class="cards--two__rect"></span>
+        <span class="cards--two__tri"></span>
+        <p></p>
+        <ul class="cards__list">
+          <li><%= player.first_name %> <%= player.last_name %> </li>
+        </ul>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

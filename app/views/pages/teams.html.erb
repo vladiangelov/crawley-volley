@@ -1,6 +1,12 @@
 <div class="container">
-  <h1>Ladies' team</h1>
-  <p>Amazing team of ladies</p>
-  <h1>Men's team</h1>
-  <p>Great team of men</p>
+  <div class="teams-flex-pics">
+    <%= link_to ladies_path do %>
+      <h1>Ladies' team</h1>
+      <%= image_tag "news_ladies.jpg", class: "teams-flex-pics-img" %>
+    <% end %>
+    <%= link_to men_path do %>
+      <h1>Men's team</h1>
+      <%= image_tag "news_men.jpg", class: "teams-flex-pics-img"  %>
+    <% end %>
+  </div>
 </div>
