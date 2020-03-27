@@ -11,6 +11,13 @@ class PagesController < ApplicationController
   end
 
   def teams
+  end
+
+  def men
+    @players = Player.all
+  end
+
+  def ladies
     @players = Player.all
   end
 
