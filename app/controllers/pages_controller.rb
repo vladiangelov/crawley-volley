@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :venues, :teams, :contact, :about]
+  skip_before_action :authenticate_user!, only: [:home, :venues, :teams, :contact, :about, :men, :ladies]
 
   def home
   end
@@ -11,6 +11,7 @@ class PagesController < ApplicationController
   end
 
   def teams
+    @players = Player.all
   end
 
   def contact

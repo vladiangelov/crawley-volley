@@ -1,0 +1,21 @@
+.teams-flex-pics {
+  display: flex;
+  align-items: flex-begin;
+  justify-content: space-around;
+
+  a {
+
+  }
+  img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .teams-flex-pics {
+    display: block;
+  }
+}
+
