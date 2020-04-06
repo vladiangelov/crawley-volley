@@ -1,6 +1,7 @@
 <div class="container">
+  <h1 class="page-h1">NEWS</h1>
   <div class="news-header">
-    <h1><strong>NEWS</strong></h1>
+
     <% if !current_user.nil? %>
       <%= link_to "Create News", new_article_path %>
     <% end %>

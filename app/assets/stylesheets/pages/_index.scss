@@ -7,6 +7,7 @@
 body {
   margin: 0px;
   box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 h1, h2 {
@@ -20,6 +21,11 @@ h3, p, a {
 a {
   text-decoration: none;
   color: black;
+}
+
+.page-h1 {
+  margin: 0px 0px 16px 16px;
+  padding: 0px;
 }
 
 .container-home {
