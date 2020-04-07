@@ -26,3 +26,17 @@
   align-items: center;
   justify-content: center;
 }
+
+@media only screen and (max-width: 1024px) {
+  .match-card {
+    h1 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 12px;
+    }
+    .match-card-content-item p {
+      display: none;
+    }
+  }
+}
