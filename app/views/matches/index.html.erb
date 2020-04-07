@@ -1,5 +1,8 @@
 <div class="container">
   <h1 class="page-h1">MATCHES</h1>
+  <% if !current_user.nil? %>
+    <%= link_to "Create Match", new_match_path %>
+  <% end %>
   <% @matches.each do |match| %>
     <div class="match-card">
       <div class="match-card-header">

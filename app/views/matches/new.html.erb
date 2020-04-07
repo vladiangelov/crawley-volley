@@ -1,0 +1,15 @@
+<div class="container">
+  <%= simple_form_for(@match) do |f| %>
+    <%= f.input :team, :collection => ["Men", "Ladies"] %>
+    <%= f.input :home_team %>
+    <%= f.input :home_sets %>
+    <%= f.input :away_team %>
+    <%= f.input :away_sets %>
+    <%= f.input :score %>
+    <%= f.input :venue %>
+    <%= f.input :address %>
+    <%= f.input :date %>
+    <%= f.input :league, :collection => ["Surrey Volleyball League"]  %>
+    <%= f.submit "Add match", class: "btn btn-primary" %>
+  <% end %>
+</div>
