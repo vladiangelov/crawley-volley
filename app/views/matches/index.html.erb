@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 class="page-h1">MATCHES</h1>
+  <% @matches.each do |match| %>
+    <div class="match-card">
+      <div class="match-card-header">
+        <p><%= match.date.strftime("%d %B %Y") %></p>
+        <p><%= match.venue %></p>
+      </div>
+      <div class="match-card-content">
+        <h1 class="match-card-content-item"><%= match.home_team %></h1>
+        <div class="match-card-content-item">
+        <h1><%= match.home_sets %> - <%= match.away_sets %></h1>
+        <p><%= match.score %></p>
+        </div>
+        <h1 class="match-card-content-item"><%= match.away_team %></h1>
+      </div>
+    </div>
+  <% end %>
+</div>
