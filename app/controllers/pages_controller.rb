@@ -2,6 +2,9 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :venues, :teams, :contact, :about, :men, :ladies]
 
   def home
+    @last_match = Match.last
+    @latest_news = Article.last
+    @random_player = Player.all.sample
   end
 
   def venues

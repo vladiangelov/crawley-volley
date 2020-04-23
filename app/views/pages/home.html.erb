@@ -10,21 +10,24 @@
   <div class="highlights">
     <div class="highlight-item">
       <h1>LATEST NEWS</h1>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      <h3><%= @latest_news.title %></h3>
+      <p><%= @latest_news.content.first(180) %>
       </p>
-      <%= link_to 'Read Other News...', '#' %>
+      <%= link_to 'Read All The News...', articles_path %>
     </div>
     <div class="highlight-item">
-      <h1>NEXT MATCH</h1>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      <h1>LAST MATCH</h1>
+      <h3><%= @last_match.home_team %> <%= @last_match.home_sets %>:<%= @last_match.away_sets %> <%= @last_match.away_team %></h3>
+      <p>Our <%= @last_match.team %> played their last game at <%= @last_match.venue %> on <%= @last_match.date %>. Set scores were as follows: <%= @last_match.score %>. All the previous matches and results are available on the matches page.
       </p>
-      <%= link_to 'See Other Matches...', '#' %>
+      <%= link_to 'See Other Matches...', matches_path %>
     </div>
     <div class="highlight-item">
       <h1>FEATURED PLAYER</h1>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      <h3><%= @random_player.first_name %> <%= @random_player.last_name %></h3>
+      <p><%= @random_player.first_name %> is part of our <%= @random_player.team == "Men" ? "men's team" : "ladies' team" %>. He is originally from <%= @random_player.country %> and plays on the <%= @random_player.position.downcase %> position, using shirt number <%= @random_player.shirt_number %>. If you want to find out more about the teams, please click below.
       </p>
-      <%= link_to 'Meet The Team...', '#' %>
+      <%= link_to 'Meet The Teams...', teams_path %>
     </div>
   </div>
 </div>
