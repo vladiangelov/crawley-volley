@@ -3,21 +3,13 @@
     <h1 class="page-h1">OUR VENUES</h1>
   </div>
   <div class="about-us-card">
-    <div class="locations">
-      <h2>Imberhorne School</h2>
-      <p><em>Imberhorne Ln, East Grinstead, West Sussex RH29 1QY</em></p>
-    </div>
-    <p class="locations-description">Mondays - 20:00 to 22:00 - at this venue we hold both trainings and also our home matches</p>
-    <div class="locations">
-      <h2>Ifield Community College</h2>
-      <p><em>Crawley Ave, Crawley, West Sussex RH21 0DB</em></p>
-    </div>
-    <p class="locations-description">Wednesdays - 19:30 to 21:30 - this venue is for trainings only</p>
-    <div class="locations">
-      <h2>Northgate Playing Field (summer only)</h2>
-      <p><em>34 Woodside Rd, Crawley, West Sussex RH10 8EL (outdoor)</em></p>
-    </div>
-    <p class="locations-description">More information is available here from May until August - check our Facebook page for most accurate info</p>
+    <% @venues.each do |venue| %>
+      <div class="locations">
+        <h2><%= venue.name %></h2>
+        <p><em><%= venue.address %></em></p>
+      </div>
+      <p class="locations-description"><%= venue.description %></p>
+    <% end %>
   </div>
   <div
   id="map"

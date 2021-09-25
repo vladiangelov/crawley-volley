@@ -8,9 +8,10 @@ class PagesController < ApplicationController
   end
 
   def venues
-    @markers = [{ lat: 51.133630, lng: -0.033350 }, # Imberhorne School
-                { lat: 51.117859, lng: -0.209684 }, # Ifield CC
-                { lat: 51.122058, lng: -0.176779 }] # Northgate playing field
+    @venues = Venue.all.order(:id)
+    @markers = Venue.all.map do |venue|
+      { lat: venue.lat, lng: venue.long }
+    end
   end
 
   def teams
