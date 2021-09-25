@@ -8,7 +8,7 @@ gem 'pg'
 gem 'puma'
 gem 'rails', '6.1.4'
 gem 'redis'
-gem 'cloudinary', '~> 1.12.0'
+gem 'cloudinary', '~> 1.21.0'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
