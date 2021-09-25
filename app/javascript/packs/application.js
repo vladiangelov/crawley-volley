@@ -1,19 +1,18 @@
-import "bootstrap";
-import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
+import "bootstrap"
+import "mapbox-gl/dist/mapbox-gl.css" // <-- you need to uncomment the stylesheet_pack_tag in the layout!
+import { initMapbox } from "../plugins/init_mapbox"
 
-import { initMapbox } from '../plugins/init_mapbox';
+initMapbox()
 
-initMapbox();
-
-const mobileButton = document.querySelector('.navbar-mobile-menu');
-const mobileMenu = document.querySelector('.mobile-menu');
+const mobileButton = document.querySelector(".navbar-mobile-menu")
+const mobileMenu = document.querySelector(".mobile-menu")
 mobileButton.addEventListener("click", (event) => {
-    if (mobileMenu.style.display === "none") {
-    mobileMenu.style.display = "flex";
+  if (mobileMenu.style.display === "none") {
+    mobileMenu.style.display = "flex"
   } else {
-    mobileMenu.style.display = "none";
+    mobileMenu.style.display = "none"
   }
-});
+})
 
 // Code below is to potentially change the menu with scroll
 
@@ -29,4 +28,3 @@ mobileButton.addEventListener("click", (event) => {
 //     };
 //   })
 // };
-
