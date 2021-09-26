@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   get 'admin', to: 'pages#admin', as: :admin
   resources :articles
   resources :matches
+  resources :venues, only: [:new, :create, :edit, :update, :destroy]
+  get 'admin_venues', to: 'venues#admin'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
