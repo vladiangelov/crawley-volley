@@ -8,6 +8,7 @@
   <% if current_user.nil? %>
     <%= link_to 'Member Login', new_user_session_path, class: "mobile-menu-item" %>
   <% else %>
+  <%= link_to 'Admin Page', admin_path, class: "mobile-menu-item" %>
     <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "mobile-menu-item" %>
   <% end %>
 </div>

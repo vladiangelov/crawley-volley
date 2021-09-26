@@ -25,6 +25,7 @@
       <% if current_user.nil? %>
         <%= link_to 'Member Login', new_user_session_path %>
       <% else %>
+        <%= link_to 'Admin Page', admin_path %>
         <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
       <% end %>
     </div>
