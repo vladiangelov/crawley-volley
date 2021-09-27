@@ -23,7 +23,7 @@
         </div>
         <div class="news-content">
           <h2><%= article.title %></h2>
-          <p><%= article.content.first(400) %> <strong>>></strong></p>
+          <p><%= simple_format("#{article.content.first(400)}...") %></p>
         </div>
         <div class="news-links">
           <p class="news-link-button"><%= link_to "Read More", article_path(article.id) %></p>
