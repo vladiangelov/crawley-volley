@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+
+##
+# This is the venue model
+#
 class Venue < ApplicationRecord
   def description
     if training_day.nil? && training_time.nil?

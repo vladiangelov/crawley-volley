@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+
+##
+# This migration creates venues
+#
 class CreateVenues < ActiveRecord::Migration[6.1]
   def change
     create_table :venues do |t|

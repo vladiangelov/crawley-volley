@@ -1,4 +1,10 @@
+# frozen_string_literal: true
+
+##
+# This migration creates matches
+#
 class CreateMatches < ActiveRecord::Migration[5.2]
+  # rubocop:disable Metrics/MethodLength
   def change
     create_table :matches do |t|
       t.string :team
@@ -16,4 +22,5 @@ class CreateMatches < ActiveRecord::Migration[5.2]
       t.timestamps
     end
   end
+  # rubocop:enable Metrics/MethodLength
 end

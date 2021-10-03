@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+
+##
+# Matches controller
+#
 class MatchesController < ApplicationController
   def index
     @matches = Match.all.order(date: :desc)
@@ -17,6 +22,7 @@ class MatchesController < ApplicationController
   private
 
   def match_params
-    params.require(:match).permit(:team, :home_team, :away_team, :home_sets, :away_sets, :score, :league, :venue, :address, :date)
+    params.require(:match).permit(:team, :home_team, :away_team, :home_sets, :away_sets, :score, :league, :venue,
+                                  :address, :date)
   end
 end

@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+
+##
+# Venues controller
+#
 class VenuesController < ApplicationController
   def new
     @venue = Venue.new

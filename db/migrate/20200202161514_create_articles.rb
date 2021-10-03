@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+
+##
+# This migration creates articles
+#
 class CreateArticles < ActiveRecord::Migration[5.2]
   def change
     create_table :articles do |t|

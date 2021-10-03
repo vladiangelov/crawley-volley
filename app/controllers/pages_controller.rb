@@ -1,5 +1,10 @@
+# frozen_string_literal: true
+
+##
+# Pages controller
+#
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :venues, :teams, :contact, :about, :men, :ladies]
+  skip_before_action :authenticate_user!, only: %i[home venues teams contact about men ladies]
 
   def home
     @last_match = Match.last
@@ -14,8 +19,7 @@ class PagesController < ApplicationController
     end
   end
 
-  def teams
-  end
+  def teams; end
 
   def men
     @players = Player.all
@@ -25,9 +29,7 @@ class PagesController < ApplicationController
     @players = Player.all
   end
 
-  def contact
-  end
+  def contact; end
 
-  def admin
-  end
+  def admin; end
 end
