@@ -1,1 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Crawley Volleyball Team Rails App
+---
+TODO:
+1. Include setup and instructions to run app locally
+2. Include brief description of the app
