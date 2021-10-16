@@ -11,21 +11,19 @@
     <div class="highlight-item">
       <h1>LATEST NEWS</h1>
       <h3><%= @latest_news.title %></h3>
-      <p><%= @latest_news.content.first(180) %>
-      </p>
+      <p><%= @latest_news.content.first(180) %></p>
       <%= link_to 'Read All The News...', articles_path %>
     </div>
     <div class="highlight-item">
       <h1>LAST MATCH</h1>
-      <h3><%= @last_match.home_team %> <%= @last_match.home_sets %>:<%= @last_match.away_sets %> <%= @last_match.away_team %></h3>
-      <p>Our <%= @last_match.team %> played their last game at <%= @last_match.venue %> on <%= @last_match.date %>. Set scores were as follows: <%= @last_match.score %>. All the previous matches and results are available on the matches page.
-      </p>
+      <h3><%= @last_match.home_page_title %></h3>
+      <p><%= @last_match.home_page_description %></p>
       <%= link_to 'See Other Matches...', matches_path %>
     </div>
     <div class="highlight-item">
       <h1>FEATURED PLAYER</h1>
-      <h3><%= @random_player.first_name %> <%= @random_player.last_name %></h3>
-      <p><%= @random_player.first_name %> is part of our <%= @random_player.team == "Men" ? "men's team" : "ladies' team" %>. He is originally from <%= @random_player.country %> and plays on the <%= @random_player.position.downcase %> position, using shirt number <%= @random_player.shirt_number %>. If you want to find out more about the teams, please click below.
+      <h3><%= @featured_player.full_name %></h3>
+      <p><%= @featured_player.home_page_description %>
       </p>
       <%= link_to 'Meet The Teams...', teams_path %>
     </div>
