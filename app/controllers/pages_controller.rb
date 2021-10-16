@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   def home
     @last_match = Match.last
     @latest_news = Article.last
-    @random_player = Player.all.sample
+    @featured_player = Player.all.sample
   end
 
   def venues
