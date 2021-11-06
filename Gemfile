@@ -25,6 +25,7 @@ gem 'uglifier'
 gem 'webpacker'
 
 group :development do
+  gem 'brakeman'
   gem 'web-console', '>= 3.3.0'
 end
 
