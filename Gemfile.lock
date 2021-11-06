@@ -78,6 +78,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.9.1)
       msgpack (~> 1.0)
+    brakeman (5.1.2)
     builder (3.2.4)
     bundle-audit (0.1.0)
       bundler-audit
@@ -320,6 +321,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootsnap
+  brakeman
   bundle-audit
   capybara
   cloudinary (~> 1.21.0)
