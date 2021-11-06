@@ -1,0 +1,20 @@
+name: crawleyvolley_ci_pipeline
+
+on: [push]
+
+jobs:
+  linting:
+    name: Linters
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+
+      - name: Install gems
+        run: bundle install
+
+      - name: Linting
+        run: rubocop
