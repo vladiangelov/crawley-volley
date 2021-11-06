@@ -42,4 +42,5 @@ end
 
 group :test do
   gem 'bundle-audit', require: false
+  gem 'simplecov', require: false
 end
