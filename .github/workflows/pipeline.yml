@@ -2,6 +2,10 @@ name: crawleyvolley_ci_pipeline
 
 on: [push]
 
+env:
+  RAILS_ENV: test
+  DATABASE_URL: postgres://postgres:postgres@localhost
+
 jobs:
   linting:
     name: Linters
@@ -17,6 +21,7 @@ jobs:
 
       - name: Rubocop
         run: bundle exec rubocop --parallel
+
   rspec:
     name: RSpec tests
     runs-on: ubuntu-latest
