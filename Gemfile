@@ -12,9 +12,9 @@ gem 'puma'
 gem 'rails', '6.1.4'
 gem 'redis'
 gem 'rubocop', require: false
+gem 'rubocop-performance', require: false
 gem 'rubocop-rails', require: false
 gem 'rubocop-rspec', require: false
-gem 'rubocop-performance', require: false
 
 gem 'autoprefixer-rails'
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
