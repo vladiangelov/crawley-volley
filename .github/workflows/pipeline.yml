@@ -47,6 +47,9 @@ jobs:
         with:
           bundler-cache: true
 
+      - name: Install node_modules
+        run: yarn install --frozen-lockfile
+
       - name: Setup test database
         run: bundle exec rails db:create db:migrate
 
