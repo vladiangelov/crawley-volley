@@ -1,0 +1,72 @@
+name: crawleyvolley_ci_pipeline
+
+on: [push]
+
+env:
+  RAILS_ENV: test
+  DATABASE_URL: postgres://postgres:postgres@localhost
+
+jobs:
+  security:
+    name: Security checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Run bundle-audit
+        run: bundle exec bundle audit check --update
+
+  linting:
+    name: Linters
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Rubocop
+        run: bundle exec rubocop --parallel
+
+  rspec:
+    name: Unit & feature tests
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:12.3-alpine
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Install node_modules
+        run: yarn install --frozen-lockfile
+
+      - name: Setup test database
+        run: bundle exec rails db:create db:migrate
+
+      - name: Run RSpec
+        run: bundle exec rspec

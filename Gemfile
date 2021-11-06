@@ -9,8 +9,12 @@ gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg'
 gem 'puma'
-gem 'rails', '6.1.4'
+gem 'rails', '6.1.4.1'
 gem 'redis'
+gem 'rubocop', require: false
+gem 'rubocop-performance', require: false
+gem 'rubocop-rails', require: false
+gem 'rubocop-rspec', require: false
 
 gem 'autoprefixer-rails'
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
@@ -34,4 +38,8 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'webdrivers'
+end
+
+group :test do
+  gem 'bundle-audit', require: false
 end
