@@ -7,6 +7,21 @@ env:
   DATABASE_URL: postgres://postgres:postgres@localhost
 
 jobs:
+  security:
+    name: Security checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Run bundle-audit
+        run: bundle exec bundle audit check --update
+
   linting:
     name: Linters
     runs-on: ubuntu-latest
@@ -23,7 +38,7 @@ jobs:
         run: bundle exec rubocop --parallel
 
   rspec:
-    name: RSpec tests
+    name: Unit & feature tests
     runs-on: ubuntu-latest
     services:
       postgres:
