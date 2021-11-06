@@ -25,10 +25,13 @@ group :development do
 end
 
 group :development, :test do
+  gem 'capybara'
   gem 'dotenv-rails'
   gem 'listen', '~> 3.0.5'
   gem 'pry-byebug'
   gem 'pry-rails'
+  gem 'rspec-rails', '~> 5.0.0'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'webdrivers'
 end
