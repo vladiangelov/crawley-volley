@@ -3,7 +3,7 @@
   <%= link_to 'VENUES', venues_path, class: "mobile-menu-item" %>
   <%= link_to 'NEWS', articles_path, class: "mobile-menu-item" %>
   <%= link_to 'TEAMS', teams_path, class: "mobile-menu-item" %>
-  <%= link_to 'MATCHES', '#', class: "mobile-menu-item" %>
+  <%= link_to 'MATCHES', matches_path, class: "mobile-menu-item" %>
   <%= link_to 'CONTACT', contact_path, class: "mobile-menu-item" %>
   <% if current_user.nil? %>
     <%= link_to 'Member Login', new_user_session_path, class: "mobile-menu-item" %>
