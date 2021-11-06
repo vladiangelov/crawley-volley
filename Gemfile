@@ -11,6 +11,7 @@ gem 'pg'
 gem 'puma'
 gem 'rails', '6.1.4'
 gem 'redis'
+gem 'rubocop', require: false
 
 gem 'autoprefixer-rails'
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
