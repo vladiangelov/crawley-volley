@@ -1,7 +1,7 @@
 .mobile-menu {
   position: fixed;
+  display: flex;
   top: 110px;
-  display: none;
   flex-direction: column;
   background-color: rgba(1, 1, 1, 0.9);
   z-index: 4;
@@ -10,7 +10,10 @@
   padding: 4px;
   align-items: center;
   margin: 0px;
+  transform: translateX(200%);
+  transition: transform 0.3s;
 }
+
 .mobile-menu-item {
   text-decoration: none;
   font-weight: bold;
@@ -20,5 +23,16 @@
   border-top: 2px solid black;
   margin: 2px;
   padding-left: 0px;
-  text-align:center;
+  text-align: center;
+}
+
+.mobile-menu-appear {
+  transform: translateX(0%);
+  transition: transform 0.3s;
+}
+
+@media only screen and (min-width: 1024px) {
+  .mobile-menu {
+    display: none;
+  }
 }
