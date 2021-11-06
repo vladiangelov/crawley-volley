@@ -1,13 +1,13 @@
 AllCops:
   Exclude:
-    - "bin/**/*"
-    - "db/schema.rb"
-    - "db/seeds.rb"
-    - "config/**/*"
-    - "node_modules/**/*"
-    - "script/**/*"
-    - "support/**/*"
-    - "tmp/**/*"
+    - bin/**/*
+    - db/schema.rb
+    - db/seeds.rb
+    - config/**/*
+    - node_modules/**/*
+    - script/**/*
+    - support/**/*
+    - tmp/**/*
     - vendor/bundle/**/*
   NewCops: enable
 
