@@ -15,5 +15,5 @@ jobs:
         with:
           bundler-cache: true
 
-      - name: Linting
-        run: bin/rubocop --parallel
+      - name: Rubocop
+        run: rubocop
