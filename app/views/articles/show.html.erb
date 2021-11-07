@@ -1,13 +1,22 @@
 <div class="container">
-  <h1><%= @article.title %></h1>
-  <p><%= @article.category %></p>
-  <p><%= @article.created_at.time.strftime("%d/%m/%Y") %></p>
-  <% if @article.photo.attached? %>
-    <%= cl_image_tag @article.photo.key, height: 250, width: 320, crop: :fill %>
-  <% else %>
-    <%= image_tag("news_men.jpg", height: 250, width: 320, crop: :fill ) %>
-  <% end %>
-    <p><%= simple_format(@article.content) %></p>
-  <%= link_to "Back to news", articles_path %>
-
+  <div class="news-individual-card">
+    <div>
+      <h1><%= @article.title %></h1>
+      <p><%= @article.category %></p>
+      <p><%= @article.created_at.strftime("%d/%m/%Y") %></p>
+    </div>
+    <div class="news-individual-content">
+      <div class="news-individual-image-wrapper">
+        <% if @article.photo.attached? %>
+          <%= cl_image_tag @article.photo.key %>
+        <% else %>
+          <%= image_tag("news_men.jpg") %>
+        <% end %>
+      </div>
+      <div class="news-individual-text">
+        <%= simple_format(@article.content) %>
+        <p class="news-link-button"><%= link_to "Back to news", articles_path %></p>
+      </div>
+    </div>
+  </div>
 </div>
