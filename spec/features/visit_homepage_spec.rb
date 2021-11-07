@@ -2,7 +2,6 @@
 
 require 'rails_helper'
 
-# rubocop:disable Metrics/BlockLength
 RSpec.describe 'Visiting the homepage', type: :feature do
   before(:example) do
     Player.create!(
@@ -25,7 +24,7 @@ RSpec.describe 'Visiting the homepage', type: :feature do
     )
 
     @user = User.create!(
-      email: 'testmail@crawleysparks.co.uk',
+      email: 'test@crawleysparks.co.uk',
       password: 'blabla'
     )
 
@@ -62,4 +61,3 @@ RSpec.describe 'Visiting the homepage', type: :feature do
     expect(page).to have_content('Sign Out')
   end
 end
-# rubocop:enable Metrics/BlockLength

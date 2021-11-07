@@ -13,3 +13,6 @@ AllCops:
 
 Style/ClassAndModuleChildren:
   EnforcedStyle: compact
+
+Metrics/BlockLength:
+  IgnoredMethods: ["describe", "context", "before"]

@@ -2,7 +2,6 @@
 
 require 'rails_helper'
 
-# rubocop:disable Metrics/BlockLength
 RSpec.describe PagesController, type: :controller do
   describe 'GET home' do
     it 'renders the home page template' do
@@ -46,5 +45,3 @@ RSpec.describe PagesController, type: :controller do
     end
   end
 end
-
-# rubocop:enable Metrics/BlockLength
